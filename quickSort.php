@@ -1,5 +1,5 @@
 <?php
-$arr = [50, 13, 48, 51, 30, 45, 15, 78, 63, 127, 142];
+$arr = [50, 12, 48, 51, 30, 45, 15, 78, 63, 127, 123, 141, 130, 135];
 
 function quickSort($arr) {
   $length = count($arr);
@@ -7,8 +7,9 @@ function quickSort($arr) {
   if ($length >= 1) {
     $getFirstEl = $arr[0]; // Get first el in array
     $left = $right = [];
+    $iMax = count($arr);
 
-    for ($i = 1; $i < count($arr); $i++) {
+    for ($i = 1; $i < $iMax; $i++) {
       if ($arr[$i] < $getFirstEl) {
         $left[] = $arr[$i];
       } else {
